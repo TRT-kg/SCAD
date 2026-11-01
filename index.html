@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="S-CAD connects source reliability with token-level decoding for trustworthy retrieval-augmented generation. Read the paper, explore the method, and view the results.">
+  <meta name="theme-color" content="#19362c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="S-CAD · Source-Calibrated Adaptive Decoding">
+  <meta property="og:description" content="Trustworthy retrieval-augmented generation under noisy and conflicting evidence. Research overview and full paper.">
+  <title>S-CAD · Source-Calibrated Adaptive Decoding</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="S-CAD home">S-CAD<span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#overview" data-i18n="navOverview">Overview</a>
+        <a href="#method" data-i18n="navMethod">Method</a>
+        <a href="#results" data-i18n="navResults">Results</a>
+        <a class="nav-paper" href="reader.html" data-i18n="navPaper">Read the paper ↗</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="切换为中文">中文</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="paper-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="paperType">RESEARCH PROJECT</span><span class="eyebrow-year">2026</span></p>
+        <h1 id="paper-title"><span class="hero-short">S-CAD</span><span class="hero-title">Source-Calibrated Adaptive Decoding for Trustworthy Retrieval-Augmented Generation</span></h1>
+        <p class="hero-intro" data-i18n="heroIntro">Connecting source reliability with token-level decoding under noisy and conflicting evidence.</p>
+        <p class="authors">Yalong Guo<span>,</span> <a href="mailto:zhangyangsen@163.com">Yangsen Zhang<sup>*</sup></a><span>,</span> Jing Kang<span>,</span> Siwei Wang</p>
+        <p class="affiliation" data-i18n="affiliation">Institute of Intelligent Information Processing<br>Beijing Information Science and Technology University</p>
+        <div class="hero-actions"><a class="button button-primary" href="reader.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4h7l2 2h7v15H4z"/><path d="M8 11h8M8 15h8"/></svg><span data-i18n="readPaper">Read the paper</span></a><a class="button button-outline" href="assets/paper.pdf" download="S-CAD-paper.pdf"><span data-i18n="downloadPdf">Download PDF</span><span aria-hidden="true">↓</span></a></div>
+        <a class="citation-jump" href="#citation" data-i18n="citeLink">Cite this work ↘</a>
+      </div>
+      <div class="hero-document">
+        <a class="paper-preview" href="reader.html" aria-label="Read the full S-CAD paper"><img src="assets/paper-cover.webp" alt="First page of the S-CAD research paper" width="893" height="1155" fetchpriority="high"><span class="preview-open" aria-hidden="true">↗</span></a>
+        <div class="document-caption"><span data-i18n="fullManuscript">FULL MANUSCRIPT</span><span data-i18n="pageCount">13 pages · PDF</span></div>
+      </div>
+    </section>
+
+    <section class="overview-band" id="overview" aria-labelledby="overview-title">
+      <div class="wrap overview-grid">
+        <div><p class="section-number">01 / <span data-i18n="navOverview">Overview</span></p><h2 id="overview-title" data-i18n="overviewTitle">When evidence conflicts,<br>source reliability matters.</h2></div>
+        <div class="overview-body"><p data-i18n="overviewP1">Retrieved passages can be noisy, outdated, or mutually inconsistent. Amplifying all context can reinforce unreliable evidence and combine incompatible facts.</p><p data-i18n="overviewP2">S-CAD connects source-level reliability assessment with token-level probability control. It estimates which sources to trust, traces their use during generation, and calibrates a decoding gate to balance retrieved evidence with parametric knowledge.</p><a class="text-link" href="reader.html#page=2" data-i18n="readMotivation">Read the motivation in the paper ↗</a></div>
+      </div>
+    </section>
+
+    <section class="method-section wrap" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><div><p class="section-number">02 / <span data-i18n="navMethod">Method</span></p><h2 id="method-title" data-i18n="methodTitle">From source trust to decoding control</h2></div><p class="section-aside" data-i18n="methodAside">A reliability prior, token-level attribution,<br>and a calibrated posterior gate.</p></div>
+      <figure class="framework-figure"><a href="assets/figures/framework.webp" target="_blank" rel="noopener" aria-label="Open the complete S-CAD framework figure"><img src="assets/figures/framework.webp" alt="The S-CAD framework: source reliability prior, attention-grounded token trust, and source-calibrated adaptive fusion" width="2600" height="1283" loading="lazy"></a><figcaption><span data-i18n="frameworkCaption">Figure 2. The S-CAD framework. Original figure from the paper.</span><a href="reader.html#page=4" data-i18n="figureSource">Paper, p. 4 ↗</a></figcaption></figure>
+      <div class="method-steps">
+        <article><span class="step-index">01</span><h3 data-i18n="step1Title">Estimate source reliability</h3><p data-i18n="step1Text">Combine query relevance, factual consistency, and the distributional influence of each source to build a reliability prior.</p></article>
+        <article><span class="step-index">02</span><h3 data-i18n="step2Title">Trace token-level trust</h3><p data-i18n="step2Text">Use attention attribution to track which sources contribute to the current token, combining local reliability with global trust.</p></article>
+        <article><span class="step-index">03</span><h3 data-i18n="step3Title">Calibrate the decoding gate</h3><p data-i18n="step3Text">Combine token trust with a JSD-driven gate to balance context-free and context-conditioned probability distributions.</p></article>
+      </div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title"><div class="wrap">
+      <div class="section-heading"><div><p class="section-number">03 / <span data-i18n="navResults">Results</span></p><h2 id="results-title" data-i18n="resultsTitle">Evaluated under knowledge conflicts</h2></div><a class="text-link" href="reader.html#page=7" data-i18n="fullResults">Full results in the paper ↗</a></div>
+      <div class="result-lead"><p class="result-value">91.15<span>%</span></p><div><h3 data-i18n="resultLead">RealtimeQA accuracy on Qwen2.5-7B-Inst</h3><p data-i18n="resultDetail">+12.45 percentage points over Origin and +7.05 points over FaithfulRAG in mixed retrieval.</p></div></div>
+      <div class="table-heading"><h3 data-i18n="tableTitle">Mixed-retrieval accuracy</h3><span data-i18n="tableUnit">ACC (%) · Table 1</span></div>
+      <div class="backbone-tabs" role="group" aria-label="Select backbone"><button type="button" data-backbone="Llama3.1-8B-Inst" aria-pressed="false">Llama3.1-8B-Inst</button><button type="button" data-backbone="Qwen2.5-7B-Inst" class="active" aria-pressed="true">Qwen2.5-7B-Inst</button><button type="button" data-backbone="Mistral-7B-Inst" aria-pressed="false">Mistral-7B-Inst</button></div>
+      <div class="table-scroll" role="region" aria-label="Benchmark accuracy table" tabindex="0"><table><caption class="sr-only" id="results-caption">Qwen2.5-7B-Inst mixed retrieval, ACC (%), paper Table 1</caption><thead><tr><th scope="col" data-i18n="tableMethod">Method</th><th scope="col">FaithEval</th><th scope="col">RealtimeQA</th><th scope="col">SQuAD</th><th scope="col">MuSiQue</th><th scope="col" data-i18n="tableAverage">Average</th></tr></thead><tbody id="results-body"><tr><th scope="row">Origin</th><td>53.10</td><td>78.70</td><td>86.75</td><td>80.70</td><td>74.81</td></tr><tr><th scope="row">CAD</th><td>60.50</td><td>77.00</td><td>86.35</td><td>82.82</td><td>76.67</td></tr><tr><th scope="row">AdaCAD</th><td>62.30</td><td>78.80</td><td>86.21</td><td>82.68</td><td>77.50</td></tr><tr><th scope="row">CoCoA</th><td>65.42</td><td>83.19</td><td>86.18</td><td>82.45</td><td>79.31</td></tr><tr><th scope="row">FaithfulRAG</th><td>71.80</td><td>84.10</td><td>86.35</td><td>83.58</td><td>81.46</td></tr><tr class="our-method"><th scope="row">S-CAD</th><td>75.70</td><td>91.15</td><td>88.64</td><td>85.47</td><td>85.24</td></tr></tbody></table></div>
+      <p class="result-note" data-i18n="resultsNote">The paper evaluates three instruction-tuned backbones on FaithEval, RealtimeQA, SQuAD, and MuSiQue. S-CAD has the highest ACC in all 12 mixed-retrieval comparisons in Table 1. Golden retrieval has mixed ACC/F1 tradeoffs (Table 2).</p>
+    </div></section>
+
+    <section class="paper-section wrap" id="paper" aria-labelledby="read-title"><div><p class="section-number">04 / <span data-i18n="paperLabel">Full paper</span></p><h2 id="read-title" data-i18n="readTitle">Read the complete study.</h2><p data-i18n="readDescription">Explore the method, all benchmark results, ablations, and mechanistic analysis in the original 13-page paper.</p><div class="paper-actions"><a class="button button-primary" href="reader.html" data-i18n="openReader">Open PDF reader ↗</a><a class="text-link" href="assets/paper.pdf" download="S-CAD-paper.pdf" data-i18n="downloadPdf">Download PDF</a></div></div><div class="paper-page-number" aria-hidden="true">13<span data-i18n="pages">PAGES</span></div></section>
+
+    <section class="citation-section" id="citation" aria-labelledby="citation-title"><div class="wrap citation-grid"><div><p class="section-number">05 / <span data-i18n="citationLabel">Citation</span></p><h2 id="citation-title" data-i18n="citationTitle">Cite S-CAD</h2><p data-i18n="citationDescription">Use the paper title and author information below.</p><a class="text-link" href="CITATION.bib" download data-i18n="downloadBib">Download BibTeX ↓</a></div><div class="code-wrap"><button class="copy-button" id="copy-citation" type="button" data-i18n="copyBib">Copy BibTeX</button><pre><code id="citation-code">@misc{guo2026scad,
+  title = {{S-CAD}: Source-Calibrated Adaptive
+    Decoding for Trustworthy Retrieval-Augmented
+    Generation},
+  author = {Guo, Yalong and Zhang, Yangsen and
+    Kang, Jing and Wang, Siwei},
+  year = {2026}
+}</code></pre><span id="copy-status" class="sr-only" role="status" aria-live="polite"></span></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><div><a class="wordmark" href="#top">S-CAD<span class="wordmark-dot" aria-hidden="true">.</span></a><p data-i18n="footerDescription">Source-Calibrated Adaptive Decoding<br>for Trustworthy Retrieval-Augmented Generation</p></div><div class="footer-contact"><p data-i18n="contactLabel">CONTACT</p><a href="mailto:yalonguo@163.com">Yalong Guo · yalonguo@163.com</a><a href="mailto:zhangyangsen@163.com">Yangsen Zhang* · zhangyangsen@163.com</a><small data-i18n="corresponding">* Corresponding author</small></div><p class="funding" data-i18n="funding">Supported by the Major Project of the National Social Science Fund of China (No. 24&amp;ZD170) and Beijing Natural Science Foundation (No. L233008).</p></footer>
+</body>
+</html>
