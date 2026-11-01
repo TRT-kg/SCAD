@@ -6,7 +6,7 @@
 Institute of Intelligent Information Processing, Beijing Information Science and Technology University  
 \* Corresponding author
 
-[**Read the paper (PDF)**](assets/paper.pdf) · [**BibTeX**](CITATION.bib) · [**中文部署说明**](DEPLOY.zh-CN.md)
+[**Read the paper (PDF)**](assets/paper.pdf) · [**BibTeX**](CITATION.bib) 
 
 S-CAD connects source reliability with token-level decoding to improve retrieval-augmented generation under noisy and conflicting evidence.
 
@@ -45,12 +45,6 @@ On RealtimeQA, Qwen2.5-7B-Inst reaches **91.15% ACC**, improving by **12.45 perc
 
 Golden retrieval has mixed ACC/F1 tradeoffs. The gains above do not imply the highest score for every metric or condition. See Table 2 in the [full paper](assets/paper.pdf).
 
-### Read online
-
-The project includes a bilingual academic homepage and a self-hosted PDF reader with page navigation, zoom, and download. Once GitHub Pages is enabled, open `index.html` through the published site and select **Read the paper**. Within this GitHub repository, the PDF link above opens GitHub's document preview.
-
-This package contains the project introduction and paper reading experience. No model implementation is included.
-
 ### Citation
 
 ```bibtex
@@ -64,14 +58,3 @@ This package contains the project introduction and paper reading experience. No 
 ### Contact
 
 - Yalong Guo: [yalonguo@163.com](mailto:yalonguo@163.com)
-- Yangsen Zhang (corresponding author): [zhangyangsen@163.com](mailto:zhangyangsen@163.com)
-
-### Acknowledgments
-
-Supported by the Major Project of the National Social Science Fund of China (No. 24&ZD170) and Beijing Natural Science Foundation (No. L233008).
-
-### Publish this project
-
-Upload **the contents of this folder** to the root of a repository, then use **Settings → Pages → Deploy from a branch → main → /(root)**. Detailed Chinese steps and local preview instructions are in [DEPLOY.zh-CN.md](DEPLOY.zh-CN.md).
-
-Official guidance: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
