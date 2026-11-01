@@ -6,7 +6,7 @@
 Institute of Intelligent Information Processing, Beijing Information Science and Technology University  
 \* Corresponding author
 
-[**Read the paper (PDF)**](assets/paper.pdf) · [**BibTeX**](CITATION.bib) 
+ [**BibTeX**](CITATION.bib) 
 
 S-CAD connects source reliability with token-level decoding to improve retrieval-augmented generation under noisy and conflicting evidence.
 
@@ -23,7 +23,7 @@ S-CAD 将来源可靠性与词元级解码相结合，改善噪声与冲突证�
 
 ### Method
 
-![The S-CAD framework](assets/figures/framework.webp)
+![The S-CAD framework](framework.webp)
 
 *Figure 2 from the paper.*
 
