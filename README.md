@@ -43,7 +43,7 @@ The paper evaluates FaithEval, RealtimeQA, SQuAD, and MuSiQue with three instruc
 
 On RealtimeQA, Qwen2.5-7B-Inst reaches **91.15% ACC**, improving by **12.45 percentage points** over Origin and **7.05 points** over FaithfulRAG. Values follow Table 1. Improvements use the source precision before rounding the average.
 
-Golden retrieval has mixed ACC/F1 tradeoffs. The gains above do not imply the highest score for every metric or condition. See Table 2 in the [full paper](assets/paper.pdf).
+Golden retrieval has mixed ACC/F1 tradeoffs. The gains above do not imply the highest score for every metric or condition.
 
 ### Citation
 
